@@ -13,6 +13,7 @@
 </head>
 <body>
 
+    <!-- The entire body of the HTML remains exactly the same as before... -->
     <header class="header">
         <div class="container">
             <div class="header-content">
@@ -162,7 +163,6 @@
             </div>
         </section>
 
-        <!-- Contact Section -->
         <section id="contact" class="contact-section">
             <div class="container">
                 <div class="section-title">
@@ -179,7 +179,6 @@
         </section>
     </main>
 
-    <!-- Site Footer -->
     <footer class="site-footer">
         <div class="container">
             <div class="social-links">
@@ -198,9 +197,23 @@
     <script>
         const menuToggle = document.querySelector('.mobile-menu-toggle');
         const headerRight = document.querySelector('.header-right');
+        const navLinks = document.querySelectorAll('.navigation a'); // New: Select all nav links
+
+        // This part remains the same: toggles menu on hamburger click
         menuToggle.addEventListener('click', () => {
             headerRight.classList.toggle('active');
             menuToggle.classList.toggle('active');
+        });
+
+        // New: Add click listener to each navigation link
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                // If the mobile menu is open, close it
+                if (headerRight.classList.contains('active')) {
+                    headerRight.classList.remove('active');
+                    menuToggle.classList.remove('active');
+                }
+            });
         });
     </script>
 
