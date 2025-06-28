@@ -6,8 +6,8 @@ body {
     /* Fallback color in case the image doesn't load */
     background-color: #f5f0eb; 
     
-    /* Corrected Background Image Path */
-    background-image: url('../images/background.jpg');
+    /* Updated Background Image Styles with root-relative path */
+    background-image: url('/background.jpg');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
