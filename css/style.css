@@ -6,8 +6,8 @@ body {
     /* Fallback color in case the image doesn't load */
     background-color: #f5f0eb; 
     
-    /* Updated Background Image Styles with root-relative path */
-    background-image: url('/background.jpg');
+    /* Corrected Background Image Path */
+    background-image: url('../images/background.jpg');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -135,7 +135,7 @@ body {
 /* Hero Banner Styles */
 .hero-banner {
     padding: 80px 0;
-    background-color: rgba(245, 240, 235, 0.8); /* Semi-transparent background for readability */
+    background-color: rgba(245, 240, 235, 0.8);
 }
 
 .hero-content {
@@ -205,7 +205,7 @@ body {
 /* Why Choose Me Section */
 .why-me-section {
     padding: 80px 0;
-    background-color: rgba(245, 240, 235, 0.8); /* Semi-transparent background */
+    background-color: rgba(245, 240, 235, 0.8);
 }
 .features-grid {
     display: grid;
@@ -266,7 +266,7 @@ body {
     content: '◆';
     position: absolute;
     left: 0;
-    color: #7c4dff; /* Purple diamond marker */
+    color: #7c4dff;
     font-size: 1.2em;
     line-height: 1;
 }
@@ -275,7 +275,7 @@ body {
 /* Services Section */
 .services-section {
     padding: 80px 0;
-    background-color: rgba(245, 240, 235, 0.8); /* Semi-transparent background */
+    background-color: rgba(245, 240, 235, 0.8);
 }
 .services-grid {
     display: grid;
@@ -432,7 +432,6 @@ body {
     .hero-image { order: -1; margin-bottom: 30px; }
     .hero-image img { max-width: 80%; }
     .hero-text h1 { font-size: 2em; }
-    .hero-text ul { text-align: left; display: inline-block; }
 
     /* About Section */
     .about-section { padding: 60px 0; }
@@ -442,7 +441,6 @@ body {
     .why-me-section { padding: 60px 0; }
     
     /* Consultation List */
-    .consultation-areas-section { padding: 60px 0; }
     .consultation-list { columns: 1; }
 
     /* Services Section */
@@ -451,4 +449,138 @@ body {
 
     /* Contact Section */
     .contact-section { padding: 60px 0; }
+}
+
+/*
+ =========================================
+ Blog Page Styles
+ =========================================
+*/
+.blog-section {
+    padding: 80px 0;
+    background-color: rgba(245, 240, 235, 0.8);
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.post-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.post-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.post-content {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.post-title {
+    font-size: 1.4em;
+    color: #4a148c;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.post-excerpt {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #555;
+    flex-grow: 1;
+    margin-bottom: 25px;
+}
+
+
+/*
+ =========================================
+ Education Page Styles
+ =========================================
+*/
+.education-section {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.education-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 60px auto;
+}
+
+.education-intro p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #555;
+}
+
+.certificate-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.certificate-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #fff;
+    transition: box-shadow 0.3s;
+}
+
+.certificate-card:hover {
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.certificate-image {
+    width: 100%;
+    display: block;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.certificate-image:last-of-type {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.certificate-caption {
+    padding: 20px;
+    text-align: center; /* This is the corrected line */
+}
+
+.certificate-title {
+    font-size: 1.1em;
+    font-weight: 700;
+    color: #333;
+    margin: 0 0 5px 0;
+}
+
+.certificate-source {
+    font-size: 0.9em;
+    color: #777;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .certificate-grid {
+        grid-template-columns: 1fr;
+    }
 }
