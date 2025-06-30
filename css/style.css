@@ -521,13 +521,15 @@ body {
     background-color: #fff;
 }
 
-.education-intro {
+/* Updated selector to target the intro text on the education page */
+.education-section .about-content {
     text-align: center;
     max-width: 800px;
     margin: 0 auto 60px auto;
 }
 
-.education-intro p {
+.education-section .about-content p {
+    text-align: center;
     font-size: 1.1em;
     line-height: 1.8;
     color: #555;
@@ -557,13 +559,17 @@ body {
     border-top-right-radius: 8px;
 }
 
+.certificate-image:not(:first-of-type) {
+    border-top: 1px solid #e0e0e0;
+}
+
 .certificate-image:last-of-type {
     border-bottom: 1px solid #e0e0e0;
 }
 
 .certificate-caption {
     padding: 20px;
-    text-align: center; /* This is the corrected line */
+    text-align: center;
 }
 
 .certificate-title {
