@@ -510,7 +510,6 @@ body {
     margin-bottom: 25px;
 }
 
-
 /*
  =========================================
  Education Page Styles
@@ -521,15 +520,13 @@ body {
     background-color: #fff;
 }
 
-/* Updated selector to target the intro text on the education page */
-.education-section .about-content {
+.education-intro {
     text-align: center;
     max-width: 800px;
     margin: 0 auto 60px auto;
 }
 
-.education-section .about-content p {
-    text-align: center;
+.education-intro p {
     font-size: 1.1em;
     line-height: 1.8;
     color: #555;
@@ -559,11 +556,7 @@ body {
     border-top-right-radius: 8px;
 }
 
-.certificate-image:not(:first-of-type) {
-    border-top: 1px solid #e0e0e0;
-}
-
-.certificate-image:last-of-type {
+.certificate-image:not(:last-of-type) {
     border-bottom: 1px solid #e0e0e0;
 }
 
