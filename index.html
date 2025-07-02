@@ -190,8 +190,13 @@
                 </div>
                 <div class="form-container">
                     <p class="form-intro">Заповніть коротку форму – і я зв’яжуся з вами найближчим часом.</p>
-                    <form name="contact" method="POST" action="/success.html" data-netlify="true">
+                    <!-- This form now includes the honeypot field for spam protection -->
+                    <form name="contact" method="POST" action="/success.html" data-netlify="true" data-netlify-honeypot="bot-field">
                         <input type="hidden" name="form-name" value="contact" />
+                        <!-- This next field is the honeypot. It should be hidden from users. -->
+                        <p class="hidden">
+                            <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+                        </p>
                         <div class="form-group">
                             <label for="name">Ваше ім’я</label>
                             <input type="text" id="name" name="name" required>

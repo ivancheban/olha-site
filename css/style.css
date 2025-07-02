@@ -688,3 +688,8 @@ body {
     border-color: #7c4dff;
     box-shadow: 0 0 0 3px rgba(124, 77, 255, 0.2);
 }
+
+/* Style to hide the honeypot field from users */
+.hidden {
+    display: none;
+}
