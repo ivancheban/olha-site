@@ -671,3 +671,20 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    font-size: 1em;
+    font-family: 'Montserrat', sans-serif; /* Ensure it uses the site font */
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    resize: vertical; /* Allow users to resize it vertically */
+}
+
+.form-group textarea:focus {
+    outline: none;
+    border-color: #7c4dff;
+    box-shadow: 0 0 0 3px rgba(124, 77, 255, 0.2);
+}
