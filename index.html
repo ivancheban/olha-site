@@ -190,16 +190,14 @@
                 </div>
                 <div class="form-container">
                     <p class="form-intro">Заповніть коротку форму — я зв'яжуся із вами протягом доби, щоб узгодити зручний час. Ваші дані не передаються третім особам.</p>
-                    <!-- This form is now more robust -->
-                    <form name="contact" method="POST" data-netlify="true">
-                        <!-- Hidden input to tell Netlify this is the form to watch -->
+                    <form name="contact" method="POST" action="/success.html" data-netlify="true">
                         <input type="hidden" name="form-name" value="contact" />
                         <div class="form-group">
                             <label for="name">Ім'я</label>
                             <input type="text" id="name" name="name" required>
                         </div>
                         <div class="form-group">
-                            <label for="contact-method">Телефон або email</label>
+                            <label for="contact-method">Телефон або E-mail</label>
                             <input type="text" id="contact-method" name="contact-method" required>
                         </div>
                         <div class="form-group">
