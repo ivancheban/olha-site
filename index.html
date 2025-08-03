@@ -59,7 +59,8 @@
                 <div class="header-right">
                     <nav class="navigation">
                         <ul>
-                            <li><a href="index.html#home">Головна</a></li>
+                            <li><a href="index.html">Головна</a></li>
+                            <li><a href="education.html">Про мене</a></li>
                             <li><a href="index.html#services">Послуги</a></li>
                             <li><a href="blog.html">Блог</a></li>
                             <li><a href="index.html#contact">Контакти</a></li>
@@ -190,10 +191,8 @@
                 </div>
                 <div class="form-container">
                     <p class="form-intro">Заповніть коротку форму – і я зв’яжуся з вами найближчим часом.</p>
-                    <!-- This form now includes the honeypot field for spam protection -->
                     <form name="contact" method="POST" action="/success.html" data-netlify="true" data-netlify-honeypot="bot-field">
                         <input type="hidden" name="form-name" value="contact" />
-                        <!-- This next field is the honeypot. It should be hidden from users. -->
                         <p class="hidden">
                             <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
                         </p>
@@ -239,7 +238,7 @@
             <div class="social-links">
                 <a href="https://t.me/olha_dmytrenko" target="_blank" title="Telegram"><i class="fa-brands fa-telegram"></i></a>
                 <a href="https://www.instagram.com/odmytrenko.psy" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://www.facebook.com/profile.php?id=61577846654456" target="_blank" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://facebook.com/your-profile" target="_blank" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
                 <a href="https://www.youtube.com/@osvichena" target="_blank" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
             </div>
             <div class="copyright">
@@ -247,6 +246,9 @@
             </div>
         </div>
     </footer>
+
+    <!-- Go Up Button -->
+    <a href="#" class="go-up-button"><i class="fas fa-arrow-up"></i></a>
 
     <script>
         const menuToggle = document.querySelector('.mobile-menu-toggle');
@@ -267,6 +269,6 @@
             });
         });
     </script>
-<a href="#" class="go-up-button"><i class="fas fa-arrow-up"></i></a>
+
 </body>
 </html>
