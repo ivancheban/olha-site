@@ -298,13 +298,45 @@
         </div>
     </footer>
 
+    <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Перегляд сертифіката">
+        <button class="lightbox-close" aria-label="Закрити">&times;</button>
+        <img src="" alt="">
+    </div>
+
     <script>
         const menuToggle = document.querySelector('.mobile-menu-toggle');
         const headerRight = document.querySelector('.header-right');
-        
+
         menuToggle.addEventListener('click', () => {
             headerRight.classList.toggle('active');
             menuToggle.classList.toggle('active');
+        });
+
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = lightbox.querySelector('img');
+        const certGrid = document.querySelector('.certificate-grid');
+
+        certGrid.addEventListener('click', (e) => {
+            const img = e.target.closest('.certificate-image');
+            if (!img) return;
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        const closeLightbox = () => {
+            lightbox.classList.remove('active');
+            lightboxImg.src = '';
+            document.body.style.overflow = '';
+        };
+
+        lightbox.addEventListener('click', closeLightbox);
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+                closeLightbox();
+            }
         });
     </script>
 <a href="#" class="go-up-button"><i class="fas fa-arrow-up"></i></a>
