@@ -810,10 +810,12 @@ body {
 }
 
 .testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    /* Masonry via multi-column: testimonial screenshots have very different
+       aspect ratios, so a grid row would stretch every card to the tallest. */
+    columns: 3 300px;
+    column-gap: 30px;
     margin-top: 40px;
+    margin-bottom: -30px; /* absorb the last card's margin in each column */
 }
 
 .testimonial-card {
@@ -822,6 +824,9 @@ body {
     overflow: hidden;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    break-inside: avoid;
+    width: 100%;
+    margin-bottom: 30px;
 }
 
 .testimonial-card:hover {
